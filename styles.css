@@ -55,7 +55,7 @@ img {
   font-weight: 700;
   text-align: center;
   border-radius: 5px;
-  cursor: pointer;
+  
 }
 
 .counter-div > * {
@@ -67,25 +67,47 @@ img {
 }
 
 .buttons button {
-  padding: 1rem;
   margin: 0 1rem;
+  padding: 1rem;
   font-size: 1.5rem;
-  /* color: var(--white) */
-  border: none;
+  cursor: pointer;
   outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
   border-radius: 3px;
+  /* box-shadow: 0 9px #999; */
 }
 
-button.Subtract {
-  background-color: orangered;
-  
+.buttons button:hover {
+  background-color: #3e8e41;
 }
-button.Reset {
+
+.buttons button:active{
+  background-color: #3e8e41;
+  /* box-shadow: 0 5px #666; */
+  transform: translateY(4px);
+}
+
+button.subtract {
+  background-color: orangered;
+}
+.buttons button.subtract:hover {
+  background-color: rgb(203, 4, 4);
+}
+button.reset {
   background-color: var(--white);
   color: var(--black)
-
 }
-button.Add {
-  background-color: green;
 
+.buttons button.reset:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+button.add {
+  background-color: rgb(3, 163, 3);
+}
+
+.buttons button.add:hover {
+  background-color: #007e04;
 }
