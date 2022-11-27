@@ -1,39 +1,15 @@
-const count = document.querySelector(".count");
-// const add = document.querySelector(".add");
-// const resetCount = document.querySelector(".reset");
-// const sub = document.querySelector(".subtract");
-const buttons = document.querySelector(".buttons");
+// const rand = Math.floor(Math.random() * 10 + 1);
+// console.log(rand);
 
-buttons.addEventListener("click", (e) => {
-    if (e.target.classList.contains("add")) {
-       count.innerHTML++;
-       setColor();
-    }
-    if (e.target.classList.contains("subtract")) {
-        count.innerHTML--;
-        setColor();
-    }
-    if (e.target.classList.contains("reset")) {
-        count.innerHTML = 0;
-        setColor();
-    }
-});
+const number = document.querySelector(".number")
+const btn = document.querySelector(".generate")
 
-function setColor() {
-    if (count.innerHTML > 0) {
-        count.style.color = "yellow"
-    } else if (count.innerHTML < 0) {
-        count.style.color = "orangered"
-    } else {
-        count.style.color = "#fff"
-    }
+const generateNumber = () => {
+    // generate number between one and ten
+    const randomNumber = Math.floor(Math.random() * 10 + 1);
+    number.innerHTML = randomNumber;
 }
-// add.addEventListener("click", () => {
-//     count.innerHTML++;
-// });
-// sub.addEventListener("click", () => {
-//     count.innerHTML--;
-// });
-// resetCount.addEventListener("click", () => {
-//     count.innerHTML = 0;
-// });
+
+btn.addEventListener("click", generateNumber);
+
+generateNumber();
