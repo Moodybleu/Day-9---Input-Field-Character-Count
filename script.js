@@ -1,15 +1,16 @@
-// const rand = Math.floor(Math.random() * 10 + 1);
-// console.log(rand);
+// let color = Math.random();
+// color = Math.random().toString(16);
+// color = Math.random().toString(16).substring(2, 8);
 
-const number = document.querySelector(".number")
+// console.log(color);
+
+const hex = document.querySelector(".hex")
 const btn = document.querySelector(".generate")
 
-const generateNumber = () => {
-    // generate number between one and ten
-    const randomNumber = Math.floor(Math.random() * 10 + 1);
-    number.innerHTML = randomNumber;
-}
+const generateColor = () => {
+    const colorRandom = Math.random().toString(16).substring(2, 8);
+    document.body.style.backgroundColor = "#" + colorRandom;
+    hex.innerHTML = "#" + colorRandom;
+};
 
-btn.addEventListener("click", generateNumber);
-
-generateNumber();
+btn.addEventListener("click", generateColor);
