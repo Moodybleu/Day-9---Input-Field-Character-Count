@@ -1,18 +1,6 @@
-// let color = Math.random();
-// color = Math.random().toString(16);
-// color = Math.random().toString(16).substring(2, 8);
+const count = document.querySelector(".count");
+const input = document.querySelector("input");
 
-// console.log(color);
-
-const hex = document.querySelector(".hex")
-const btn = document.querySelector(".generate")
-
-const generateColor = () => {
-    const colorRandom = Math.random().toString(16).substring(2, 8);
-    document.body.style.backgroundColor = "#" + colorRandom;
-    hex.innerHTML = "#" + colorRandom;
-};
-
-btn.addEventListener("click", generateColor);
-
-generateColor();
+input.addEventListener("keyup", () => {
+    count.innerHTML = input.value.length;
+})
